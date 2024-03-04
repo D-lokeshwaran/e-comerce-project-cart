@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+:root {
+    --secondary-color: magenta;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 1rem;
+    background-color: #c9f3e0;
+}
+.logo img {
+    width: 80px;
+    height: 80px;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 50%;
+}
+.header-item {
+    margin-right: 1rem;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-size: 1rem;
+    font-weight: 600;
+}
+.header-item:hover {
+    color: var(--secondary-color);
+}
+.header-item:focus {
+    outline: none;
+    text-decoration: underline;
+}
+.header-item--selected {
+    color: var(--secondary-color);
+}
+.override-btn {
+    border: none;
+    background: transparent;
+}
+.shopping-cart {
+    display: flex;
+    align-items: center;
+    padding: 0.5rem 1rem;
+    background-color: var(--secondary-color);
+    border-radius: 5px;
+    color: #fff;
+}
+.cart-length {
+    margin-left: 0.25rem;
+}
+.image {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    object-position: center;
+    padding: 1rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.products {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    padding: 2rem;
+}
+.product {
+    width: 250px;
+    border: 1px solid #e2e2e2;
+    margin: 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+.title {
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: center;
+}
+.product-top {
+    min-height: 80%;
+}
+.product-body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2f2f2;
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+}
+.add-to-cart-container {
+    display: flex;
+    align-items: center;
+}
+.add-to-cart {
+    background-color: var(--secondary-color);
+    padding: .5rem;
+    border-radius: 10px;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.btn {
+    background-color: var(--secondary-color);
+    padding: 0.25rem 0.5rem;
+    border-radius: 0.5rem;
+    color: #fff;
+    margin: 0 0.5rem;
+}
+
+/* Shimmering Animation */
+@keyframes shimmer {
+  0% {
+    background-position: -468px 0;
+  }
+  100% {
+    background-position: 468px 0;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.loading-shimmer {
+    animation-duration: 1.5s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: darkgray;
+    background: linear-gradient(to right, #eeeeee 8%, #dddddd 18%, #eeeeee 33%);
+    background-size: 800px 104px;
+    height: 80%;
+    position: relative;
 }
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading-card {
+    width: 200px;
+    border: 1px solid #e2e2e2;
+    margin: 5px;
+    border-radius: 4px;
+    height: 350px;
+    padding: 1rem;
 }
