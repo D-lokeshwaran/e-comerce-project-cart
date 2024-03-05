@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/e-comerce-project-cart/static/css/main.45232a02.css",
+    "main.js": "/e-comerce-project-cart/static/js/main.4a91cafa.js",
+    "static/media/logo.png": "/e-comerce-project-cart/static/media/logo.2e84c2b8466735e694d6.png",
+    "index.html": "/e-comerce-project-cart/index.html",
+    "main.45232a02.css.map": "/e-comerce-project-cart/static/css/main.45232a02.css.map",
+    "main.4a91cafa.js.map": "/e-comerce-project-cart/static/js/main.4a91cafa.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.45232a02.css",
+    "static/js/main.4a91cafa.js"
+  ]
+}
